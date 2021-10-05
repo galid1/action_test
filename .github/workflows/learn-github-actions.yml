@@ -11,9 +11,9 @@ jobs:
 
     steps:
       - name: echo env variable
-      - shell: bash
-        run: |
-        echo HIHIHI
+        env:
+          DOCKER_ID: ${{ DOCKER_ID }}
+        run: echo {{secrets.DOCKER_ID}} @@@@@@@@
 
       - uses: actions/checkout@v2
 
