@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: echo env variable
         env:
-          DOCKER_ID: ${{ DOCKER_ID }}
+          DOCKER_ID: ${{ secrets.DOCKER_ID }}
         run: echo {{secrets.DOCKER_ID}} @@@@@@@@
 
       - uses: actions/checkout@v2
