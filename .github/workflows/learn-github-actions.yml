@@ -6,10 +6,13 @@ on:
 
 jobs:
   build:
-    name: Spring Boot Builder
+    name: action-test
     runs-on: ubuntu-18.04
 
     steps:
+      - name: echo env variable
+        run: echo {{secrets.DOCKER_ID}} @@@@@@@@
+
       - uses: actions/checkout@v2
 
       - name: Set up JDK 11
