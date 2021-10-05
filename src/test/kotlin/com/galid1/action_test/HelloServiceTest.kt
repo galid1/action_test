@@ -15,6 +15,8 @@ internal class HelloServiceTest {
 
     @Test
     fun `hello service test`() {
+        println("TEST@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+
         // given
         val entity = mockk<HelloEntity>(relaxed = true)
 
