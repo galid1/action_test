@@ -12,7 +12,8 @@ jobs:
     steps:
       - name: echo env variable
       - shell: bash
-        run: echo HIHIHI
+        run: |
+        echo HIHIHI
 
       - uses: actions/checkout@v2
 
