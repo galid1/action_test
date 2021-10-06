@@ -25,3 +25,12 @@ jobs:
 
       - name: Copy Jar
         run: cp build/libs/*.jar ./app.jar
+
+      - name: Upload docker image
+        uses: docker/build-push-action@v1
+        with:
+          push: true
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: ${{ secrets.DOCKER_REPOSITORY }}
+          tags: latest
